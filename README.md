@@ -26,11 +26,11 @@ Configured for **Cloudflare Workers Static Assets**, with no backend, build step
 npx wrangler dev
 ```
 
-## Google Form — required before taking orders
+## Google Form and customer-supplied artwork
 
 Open `public/script.js`, find **`GOOGLE_FORM_EMBED_URL`**, and paste the **published Embed HTML URL** from Google Forms (*Send/Publish > Embed*). It normally looks like `https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true`. Save and push. The website will show an email-order fallback until the embed is configured.
 
-**Important:** Google Forms file-upload questions require customers to sign into a Google account, even when embedded. Consider a separate email artwork option for those customers.
+**Important:** The embedded Google Form should NOT contain any file-upload questions. Customers fill out the form first, then email artwork attachments to **lizzieembroiders@gmail.com**, including their name and the email used in the form so the request can be matched. The website now displays these instructions before the embedded form. Accepted reference formats mentioned on site include PNG, JPG, SVG, and PDF. The email button opens a draft; customers must attach their own file.
 
 ## Updating products and prices
 
