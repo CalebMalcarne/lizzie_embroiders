@@ -1,6 +1,6 @@
 // Replace this with the PUBLISHED Google Forms embed URL from Google Forms > Send > Embed.
 // Example: https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true
-const GOOGLE_FORM_EMBED_URL = "";
+const GOOGLE_FORM_EMBED_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfPgzjCWqtjX-oIfKlWfnpcCkSQOaO9EfXc5w7xxJkMPxahyw/viewform?usp=header";
 
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector("#main-nav");
