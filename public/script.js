@@ -26,7 +26,18 @@ if (GOOGLE_FORM_EMBED_URL.trim()) {
     const frame = document.createElement("iframe");
     frame.className = "form-embed";
     frame.title = "Lizzie Embroiders custom embroidery request form";
+    // Embed presentation; keep a separate full-page link for accessibility.
+    url.searchParams.set("embedded", "true");
     frame.src = url.toString();
+    const formOptions = document.querySelector("#form-options");
+    const fullFormLink = document.querySelector("#full-form-link");
+    if (formOptions && fullFormLink) {
+      const fullUrl = new URL(url.toString());
+      fullUrl.searchParams.delete("embedded");
+      fullUrl.searchParams.delete("usp");
+      fullFormLink.href = fullUrl.toString();
+      formOptions.hidden = false;
+    }
     frame.loading = "lazy";
     frame.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
     wrapper.replaceWith(frame);
